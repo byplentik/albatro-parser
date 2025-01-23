@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -169,3 +170,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+=======
+.venv
+.idea
+>>>>>>> 23b81d6 (Полная реализация парсеров днс и мвидео)

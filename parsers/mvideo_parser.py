@@ -1,5 +1,4 @@
 import requests
-import statistics
 
 
 def fetch_all_product_ids(category_id):

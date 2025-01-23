@@ -32,14 +32,6 @@ project/
 pip install -r requirements.txt
 ```
 
-Пример содержимого `requirements.txt`:
-```plaintext
-playwright
-beautifulsoup4
-requests
-openpyxl
-```
-
 ### 2. Инициализация Playwright
 Перед запуском парсера DNS выполните команду для установки браузеров Playwright:
 
@@ -52,7 +44,7 @@ playwright install
 1. Откройте сайт DNS (https://www.dns-shop.ru) в вашем браузере.
 2. Включите инструменты разработчика (обычно нажатием `F12`).
 3. Найдите вкладку "Application" или "Storage".
-4. Скопируйте cookies и сохраните их в файл `cookies.txt` в корне проекта. Формат файла:
+4. Скопируйте cookies и сохраните их в файл `cookies.txt`. Формат файла:
 
 ```
 name=value; name2=value2; ...

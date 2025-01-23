@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 def load_cookies():
     cookies = []
-    with open('cookies.txt', 'r') as f:
+    with open('parsers/cookies.txt', 'r') as f:
         cookie_data = f.read().split(';')
 
         for cookie in cookie_data:
@@ -27,7 +27,7 @@ def fetch_smartphones_from_dns():
     data = []  # Список для хранения результатов
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(channel='chrome')
+        browser = p.chromium.launch(headless=False, channel='chrome')
         context = browser.new_context()
 
         # Загружаем куки и добавляем их в контекст
@@ -83,5 +83,3 @@ def fetch_smartphones_from_dns():
 
         browser.close()
         return data
-
-fetch_smartphones_from_dns()

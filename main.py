@@ -2,7 +2,7 @@ import argparse
 
 from parsers.dns_parser import fetch_smartphones_from_dns
 from parsers.mvideo_parser import fetch_all_product_ids, fetch_product_details, fetch_product_prices
-from utils.save_to_csv_and_xls import save_to_csv_and_xls
+from utils.save_to_csv_and_xls import save_to_csv_and_xlsx
 
 
 def run_dns_parser(output_format, output_filename, sort_order):
@@ -18,9 +18,9 @@ def run_dns_parser(output_format, output_filename, sort_order):
     # Сохранение данных
     print(f"Сохранение данных в {output_format} формате...")
     if output_format == "csv":
-        save_to_csv_and_xls(data, f"{output_filename}.csv", None)
+        save_to_csv_and_xlsx(data, f"{output_filename}.csv", None)
     elif output_format == "xlsx":
-        save_to_csv_and_xls(data, None, f"{output_filename}.xlsx")
+        save_to_csv_and_xlsx(data, None, f"{output_filename}.xlsx")
 
     print("Данные успешно сохранены.")
 
@@ -62,9 +62,9 @@ def run_mvideo_parser(output_format, output_filename, sort_order):
     # Сохранение данных
     print(f"Сохранение данных в {output_format} формате...")
     if output_format == "csv":
-        save_to_csv_and_xls(product_details, f"{output_filename}.csv", None)
+        save_to_csv_and_xlsx(product_details, f"{output_filename}.csv", None)
     elif output_format == "xlsx":
-        save_to_csv_and_xls(product_details, None, f"{output_filename}.xlsx")
+        save_to_csv_and_xlsx(product_details, None, f"{output_filename}.xlsx")
 
     print("Данные успешно сохранены.")
 
@@ -85,9 +85,9 @@ def run_dns_parser(output_format, output_filename, sort_order):
     # Сохранение данных
     print(f"Сохранение данных в {output_format} формате...")
     if output_format == "csv":
-        save_to_csv_and_xls(data, f"{output_filename}.csv", None)
+        save_to_csv_and_xlsx(data, f"{output_filename}.csv", None)
     elif output_format == "xlsx":
-        save_to_csv_and_xls(data, None, f"{output_filename}.xlsx")
+        save_to_csv_and_xlsx(data, None, f"{output_filename}.xlsx")
 
     print("Данные успешно сохранены.")
 

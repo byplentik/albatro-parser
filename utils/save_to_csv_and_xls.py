@@ -1,7 +1,7 @@
 import csv
 from openpyxl import Workbook
 
-def save_to_csv_and_xls(data, csv_filename=None, xls_filename=None):
+def save_to_csv_and_xlsx(data, csv_filename=None, xls_filename=None):
     """
     Сохраняет данные в файлы форматов CSV и XLS (если указаны соответствующие параметры).
 
